@@ -57,34 +57,35 @@
   </div>
 </div>
 
-<form>
+
+<form action="surveyResults.html" method="get">
     <div class="row">
         <div class="col-6">
             <div class="container">
-              <p>Name</p>
-              <input class="form-control" type="text" placeholder="First & Last Name" aria-label="default input example">
+              <label for="name">Name</label>
+              <input name="name" class="form-control" type="text" placeholder="First & Last Name" aria-label="default input example">
               <p></p>
               <br>
                 <div class="mb-3">
-                  <p>Email address</p>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" width="200px" >
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" name="email" aria-describedby="emailHelp" width="200px" >
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
 
                 <br>
-                <p>Did you attend college as a STEM major or earn a STEM related degree?</p>
-                <select class="form-select" aria-label="Default select example">
+                <label for="STEM_major">Did you attend college as a STEM major or earn a STEM related degree?</label>
+                <select class="form-select" aria-label="Default select example" name="STEM_major">
                   <option selected>Open this select menu</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                  <option value="3">Not Sure</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="unsure">Not Sure</option>
                 </select>
 
                 <p></p>
                 <br>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">If you answered yes, what did you major in/study? In under 200 words explain what your higher education experience was like and how your gender impacted said experience.</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <label for="longanswer" class="form-label">If you answered yes, what did you major in/study? In under 200 words explain what your higher education experience was like and how your gender impacted said experience.</label>
+                  <textarea class="form-control" name="longanswer" rows="3"></textarea>
                 </div>
 
                 <p></p>
@@ -94,58 +95,58 @@
         </div>
         <div class="col-6">
           <div class="container">
-          <p>What field are your currently working in?</p>
+          <label for="field">What field are your currently working in?</label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="field" value="engineering">
+            <label class="form-check-label" for="engineering">
               Engineering
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="field" value="compsci">
+            <label class="form-check-label" for="compsci">
               Computer Science
             </label>
             </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="health">
+            <label class="form-check-label" for="health">
               Medicine/Health Sciences
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="math">
+            <label class="form-check-label" for="math">
               Mathematics
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="earthsci">
+            <label class="form-check-label" for="earthsci">
               Earth Sciences
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="IT">
+            <label class="form-check-label" for="IT">
               Information Technology
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="physics">
+            <label class="form-check-label" for="physics">
               Physics
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="chem/bio">
+            <label class="form-check-label" for="chem/bio">
               Chemistry/Biology
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="field" value="other">
+            <label class="form-check-label" for="other">
               Other
             </label>
           </div>
@@ -153,28 +154,28 @@
           <p></p>
           <br>
 
-          <p>Have you ever experienced any of the following at work?</p>
+          <label for="work">Have you ever experienced any of the following at work?</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="harrassment" id="harrassment" name="work">
+            <label class="form-check-label" for="harrassment">
               Sexual harrassment
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-            <label class="form-check-label" for="flexCheckDefault2">
+            <input class="form-check-input" type="checkbox" value="overlooked for promotions" id="promotions" name="work">
+            <label class="form-check-label" for="promotions">
               Being looked over for promotions
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-            <label class="form-check-label" for="flexCheckDefault3">
+            <input class="form-check-input" type="checkbox" value="less pay" id="pay" name="work">
+            <label class="form-check-label" for="pay">
               Being paid less than male counterparts
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
-            <label class="form-check-label" for="flexCheckDefault4">
+            <input class="form-check-input" type="checkbox" value="underestimated" id="underestimated" name="work">
+            <label class="form-check-label" for="underestimated">
               Being constantly underestimated
             </label>
           </div>
@@ -183,8 +184,8 @@
           <br>
 
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">What are the worst and best experiences you have had working in the STEM field? This could include things like your proudest achievement, any sort of discrimation you have faced, etc.</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="longanswer2" class="form-label">What are the worst and best experiences you have had working in the STEM field? This could include things like your proudest achievement, any sort of discrimation you have faced, etc.</label>
+            <textarea class="form-control" name="longanswer2" rows="3"></textarea>
           </div>
               <p></p>
               <br>
@@ -193,12 +194,13 @@
       </div>
     </div>
     <div class="text-center">
-      <a class="btn btn-primary" href="surveyResults.html" role="button">Submit</a>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </div>
     
     </div>
   </form>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+
 </body>
 </html>

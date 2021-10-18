@@ -45,42 +45,77 @@
     </div>
 
     <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Question #</th>
-            <th scope="col">Answer</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Jane Doe</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>janedoe@example.com</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Biology....blah....blah....blah</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Chemistry/Biology</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Being paid less than male counterparts<br>Being constantly underestimated</td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>Proudest achievement was.....worst experience was.....</td>
-          </tr>
-        </tbody>
-      </table>
+      <thead>
+        <tr>
+          <th scope="col">Category</th>
+          <th scope="col">Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td id="nameid"></td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td id="emailid"></td>
+        </tr>
+        <tr>
+          <th scope="row">Majored in STEM?</th>
+          <td id="majorid"></td>
+        </tr>
+        <tr>
+          <th scope="row">STEM Major Explanation</th>
+          <td id="longanswerid"></td>
+        </tr>
+        <tr>
+          <th scope="row">Field</th>
+          <td id="fieldid"></td>
+        </tr>
+        <tr>
+          <th scope="row">Bad Work Experiences</th>
+          <td id="workid"></td>
+        </tr>
+        <tr>
+          <th scope="row">Best/Worst Experiences & Accomplishments</th>
+          <td id="longanswer2id"></td>
+        </tr>
+      </tbody>
+    </table>
+
+      <div id="results"></div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="scripts/scripts.js"></script>
+      <script type="text/javascript" src="scripts/prism.js"></script>
+    
+      <script type="text/javascript">
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+        const STEM_major = urlParams.getAll('STEM_major')
+        const longanswer = urlParams.get('longanswer');
+        const field = urlParams.get('field');
+        var work = urlParams.getAll('work');
+        work = work+[];
+        console.log(work)
+        const longanswer2 = urlParams.get('longanswer2');
+        
+    
+
+        jQuery(document).ready(function() {
+          $("#nameid").html(name);
+          $("#emailid").html(email);
+          $("#majorid").html(STEM_major);
+          $("#longanswerid").html(longanswer);
+          $("#fieldid").html(field);
+          $("#workid").html(work);
+          $("#longanswer2id").html(longanswer2);
+        });
+    
+      </script>
+
 </body>
 </html>
